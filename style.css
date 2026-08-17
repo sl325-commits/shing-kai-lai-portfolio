@@ -207,6 +207,70 @@ h3 {
 }
 .contribution-list li + li::before { top: 24px; }
 
+.evidence-section {
+  margin-top: 105px;
+  padding: 72px;
+  border-radius: 24px;
+  background: #111a28;
+  color: #ffffff;
+}
+.evidence-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+  gap: 70px;
+  align-items: end;
+}
+.evidence-heading h3 { max-width: 650px; }
+.evidence-heading > p {
+  margin-bottom: 5px;
+  color: #aeb9c9;
+}
+.evidence-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.evidence-card {
+  margin-bottom: 0;
+  overflow: hidden;
+  border: 1px solid #344155;
+  border-radius: 16px;
+  background: #182335;
+}
+.evidence-card-photo { grid-column: 1 / -1; }
+.evidence-card video,
+.evidence-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000000;
+  border-bottom: 1px solid #344155;
+}
+.evidence-card-photo img { object-position: center 42%; }
+.evidence-card figcaption {
+  min-height: 164px;
+  padding: 24px 26px 27px;
+  color: #b7c1cf;
+  font-size: 0.94rem;
+}
+.evidence-card figcaption span {
+  display: block;
+  margin-bottom: 7px;
+  color: #72c4eb;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.evidence-card figcaption strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
 .research-gallery {
   margin-top: 92px;
   display: grid;
@@ -259,7 +323,7 @@ h3 {
 .copyright { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid #2b3546; font-size: 0.88rem; }
 
 @media (max-width: 850px) {
-  .section-heading, .project-introduction, .contribution-layout, .about-section { grid-template-columns: 1fr; gap: 36px; }
+  .section-heading, .project-introduction, .contribution-layout, .evidence-heading, .about-section { grid-template-columns: 1fr; gap: 36px; }
   .project-meta { text-align: left; }
   .project-stats { grid-template-columns: 1fr; }
   .stat { min-height: 0; padding: 28px 0; }
@@ -274,6 +338,10 @@ h3 {
   .projects-section { padding: 80px 0; }
   .project-hero-image { margin-top: 38px; border-radius: 12px; }
   .project-introduction, .project-stats, .contribution-layout, .research-gallery { margin-top: 55px; }
+  .evidence-section { margin-top: 65px; padding: 34px 20px; border-radius: 16px; }
+  .evidence-grid { grid-template-columns: 1fr; }
+  .evidence-card-photo { grid-column: auto; }
+  .evidence-card figcaption { min-height: 0; }
   .research-gallery { grid-template-columns: 1fr; }
   .gallery-card, .gallery-card-wide { grid-column: auto; }
   .gallery-card img, .gallery-card-wide img { height: auto; max-height: none; }
