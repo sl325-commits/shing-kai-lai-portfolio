@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Shing Kai Lai's mechanical engineering portfolio, featuring robotics, additive manufacturing, and AI."
-  >
+  <meta name="description" content="Shing Kai Lai's mechanical engineering portfolio, featuring robotics, additive manufacturing, and AI.">
   <title>Shing Kai Lai | Mechanical Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,11 +12,8 @@
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
       <a class="brand" href="#home">Shing Kai Lai</a>
-
       <div class="nav-links">
-        <a class="nav-link nav-link-primary" href="resume.pdf" target="_blank" rel="noopener">
-          Resume
-        </a>
+        <a class="nav-link nav-link-primary" href="AI&amp;Manu.pdf" target="_blank" rel="noopener">Resume</a>
         <a class="nav-link" href="#projects">Projects</a>
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#contact">Contact</a>
@@ -31,27 +25,103 @@
     <section class="hero">
       <p class="eyebrow">Mechanical Engineering Portfolio</p>
       <h1>Shing Kai Lai</h1>
-      <p class="hero-title">
-        Mechanical Engineer focused on robotics, additive manufacturing, and AI.
-      </p>
+      <p class="hero-title">Mechanical Engineer focused on robotics, additive manufacturing, and AI.</p>
       <p class="hero-description">
-        I design, build, program, and validate robotic manufacturing systems.
-        My complete project portfolio is currently being prepared.
+        I design, build, program, and validate robotic manufacturing systems—from mechanical
+        hardware and material processing to motion control and engineering validation.
       </p>
-
-      <a class="resume-button" href="resume.pdf" target="_blank" rel="noopener">
-        View My Resume
-      </a>
+      <div class="hero-actions">
+        <a class="resume-button" href="AI&amp;Manu.pdf" target="_blank" rel="noopener">View My Resume</a>
+        <a class="text-link" href="#projects">Explore My Work <span aria-hidden="true">↓</span></a>
+      </div>
     </section>
 
-    <section class="placeholder-section" id="projects">
-      <p class="section-label">Projects</p>
-      <h2>Selected engineering projects are coming soon.</h2>
+    <section class="projects-section" id="projects">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Selected Project</p>
+          <h2>Vibration-Assisted 3D Printing for In-Space Construction</h2>
+        </div>
+        <p class="project-meta">Embry-Riddle Aeronautical University<br>Research Assistant · Co-author</p>
+      </div>
+
+      <figure class="project-hero-image">
+        <img src="assets/03_printed_structures.jpg" alt="Large brick-like, cylindrical, and lattice granular structures produced by vibration-assisted 3D printing" width="1530" height="390">
+      </figure>
+
+      <div class="project-introduction">
+        <p class="project-lead">
+          Developed a vibration-assisted coaxial extrusion process for printing raw granular
+          materials into large-scale structures. Controlled vibration regulates particle flow,
+          a printable sheath stabilizes deposition, and post-print infiltration consolidates
+          the porous preform.
+        </p>
+        <p class="publication-status">
+          <span>Research output</span>
+          Co-authored <cite>“Vibrational 3D Printing of Granular Materials Toward In-Space Construction”</cite>,
+          submitted to <cite>Advanced Materials</cite>.
+        </p>
+      </div>
+
+      <div class="project-stats" aria-label="Selected project results">
+        <div class="stat"><strong>19</strong><span>Outlets demonstrated</span></div>
+        <div class="stat"><strong>400 × 210 × 60 mm</strong><span>Large-format structure</span></div>
+        <div class="stat"><strong>≈162 MPa</strong><span>Maximum reported compressive strength</span></div>
+      </div>
+
+      <div class="contribution-layout">
+        <div>
+          <p class="section-label">My Contributions</p>
+          <h3>From material preparation to robotic fabrication</h3>
+        </div>
+        <ul class="contribution-list">
+          <li>Prepared epoxy-based printable materials using a Thinky ARV-310P planetary mixer, centrifuge, and pneumatic dispensing equipment.</li>
+          <li>Collaborated on a multi-outlet coaxial printhead using SolidWorks, SLA prototyping, and CNC machining.</li>
+          <li>Generated MATLAB toolpaths and programmed a three-axis dispensing robot and a Rainbow Robotics RB16-900 six-axis robotic arm.</li>
+          <li>Supported large-format fabrication and evaluated printed composites using mechanical testing and X-ray micro-CT.</li>
+        </ul>
+      </div>
+
+      <div class="research-gallery">
+        <figure class="gallery-card gallery-card-wide">
+          <img src="assets/01_v3dp_process_overview.jpg" alt="Diagram of vibration-assisted coaxial 3D printing and post-print infiltration of granular materials" width="1800" height="916" loading="lazy">
+          <figcaption><strong>Process architecture</strong>Granular feedstock preparation, vibration-controlled coaxial deposition, and post-print infiltration.</figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="assets/02_robotic_vibration_extrusion.jpg" alt="Robotic vibration module and coaxial extruder controlling granular flow inside a printhead" width="1440" height="650" loading="lazy">
+          <figcaption><strong>Robotic extrusion system</strong>The vibration module regulates granular flow while the coaxial sheath stabilizes deposition.</figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="assets/04_microct_mechanical_validation.jpg" alt="X-ray micro-CT reconstructions and compression test curves for infiltrated granular composites" width="1600" height="263" loading="lazy">
+          <figcaption><strong>Engineering validation</strong>X-ray micro-CT and compression testing quantify internal architecture and mechanical performance.</figcaption>
+        </figure>
+
+        <figure class="gallery-card gallery-card-wide">
+          <img src="assets/05_functional_structures.jpg" alt="Printed granular structures designed for impact, thermal, and electromagnetic functions" width="1530" height="455" loading="lazy">
+          <figcaption><strong>Functional structures</strong>Different infiltrants enable impact resistance, thermal insulation, and electromagnetic shielding.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="placeholder-section" id="about">
-      <p class="section-label">About</p>
-      <h2>More information about my experience will be added soon.</h2>
+    <section class="about-section" id="about">
+      <div>
+        <p class="section-label">About</p>
+        <h2>I build physical systems and make them work.</h2>
+      </div>
+      <div class="about-copy">
+        <p>
+          I am currently pursuing a Master of Mechanical Engineering at Rice University after
+          earning my bachelor’s degree in Aerospace Engineering from the Hong Kong University
+          of Science and Technology.
+        </p>
+        <p>
+          My experience spans mechanical design, additive manufacturing, robotics, material
+          characterization, and AI-driven engineering. I enjoy taking projects from CAD and
+          experimental planning through fabrication, programming, troubleshooting, and testing.
+        </p>
+      </div>
     </section>
   </main>
 
@@ -60,14 +130,10 @@
       <p class="footer-name">Shing Kai Lai</p>
       <p>Mechanical Engineering · Robotics · Manufacturing · AI</p>
     </div>
-
     <div class="footer-contact">
       <a href="mailto:sl325@rice.edu">sl325@rice.edu</a>
-      <a href="https://www.linkedin.com/in/shing-kai-lai-0584972b1" target="_blank" rel="noopener">
-        LinkedIn
-      </a>
+      <a href="https://www.linkedin.com/in/shing-kai-lai-0584972b1" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-
     <p class="copyright">© 2026 Shing Kai Lai. All rights reserved.</p>
   </footer>
 </body>
