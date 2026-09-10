@@ -15,6 +15,7 @@
       <div class="nav-links">
         <a class="nav-link nav-link-primary" href="AI&amp;Manu.pdf" target="_blank" rel="noopener">Resume</a>
         <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#teleoperation">Teleoperation</a>
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#contact">Contact</a>
       </div>
@@ -169,6 +170,75 @@
         <figure class="gallery-card gallery-card-wide">
           <img src="assets/05_functional_structures.jpg" alt="Printed granular structures designed for impact, thermal, and electromagnetic functions" width="1530" height="455" loading="lazy">
           <figcaption><strong>Functional structures</strong>Different infiltrants enable impact resistance, thermal insulation, and electromagnetic shielding.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="teleoperation-section" id="teleoperation">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Robotics · Human–Machine Interface</p>
+          <h2>Teleoperation of Dexterous Hand</h2>
+        </div>
+        <p class="project-meta">NVIDIA Isaac Lab<br>Franka Panda · DexHand</p>
+      </div>
+
+      <div class="teleoperation-intro">
+        <p class="project-lead">
+          I developed a real-time teleoperation workflow that translated natural hand motion
+          into coordinated control of a simulated Franka Panda arm and multi-finger DexHand.
+          The goal was to make dexterous manipulation tasks intuitive for a human operator and
+          to capture demonstrations for future robot-learning workflows.
+        </p>
+        <div class="teleoperation-tools" aria-label="Teleoperation tools">
+          <span>Senso DK3 haptic glove</span><span>RGB-D camera</span>
+          <span>NVIDIA Isaac Lab</span><span>Franka Panda + DexHand</span><span>Python</span>
+        </div>
+      </div>
+
+      <figure class="teleoperation-hero">
+        <img src="assets/teleoperation-hardware-setup.webp" alt="Annotated teleoperation setup with RGB-D camera, haptic glove, Windows processing computer, and Isaac Lab simulation" width="1920" height="1080" loading="lazy">
+        <figcaption><strong>Teleoperation hardware setup</strong>The operator wears the haptic glove while an RGB-D camera observes global hand position and Isaac Lab renders the corresponding Franka-DexHand motion in real time.</figcaption>
+      </figure>
+
+      <div class="teleoperation-method">
+        <div>
+          <p class="section-label">Method</p>
+          <h3>RGB-D vision and glove sensing combined</h3>
+          <p>The RGB-D camera provided depth-based global hand position, while IMUs embedded in the haptic glove captured wrist and finger orientation. A Python pipeline fused the two inputs, converted them into arm pose and finger-joint commands, and streamed the commands to the Franka Panda and DexHand in Isaac Lab.</p>
+        </div>
+        <figure class="method-diagram">
+          <img src="assets/teleoperation-control-method.webp" alt="Control method combining RGB-D camera and haptic glove inputs to command a simulated Franka Panda and DexHand" width="1288" height="716" loading="lazy">
+          <figcaption>RGB-D position + glove orientation → real-time dexterous-hand control</figcaption>
+        </figure>
+      </div>
+
+      <div class="teleoperation-achievement">
+        <div class="achievement-copy">
+          <p class="section-label">Achievement</p>
+          <h3>Real-time human-to-robot task demonstration</h3>
+          <p>I integrated the sensing and control components into a working teleoperation interface and demonstrated direct, real-time control of the virtual robotic arm and multi-finger hand. The result is best communicated through a short video showing the operator’s glove motion and the DexHand response side by side.</p>
+          <ul>
+            <li>Mapped human wrist motion to the Franka arm pose.</li>
+            <li>Mapped glove finger sensing to individual DexHand joints.</li>
+            <li>Validated the interface through live manipulation-oriented hand motions.</li>
+          </ul>
+        </div>
+
+        <div class="teleoperation-demo-grid">
+          <figure class="task-image">
+            <img src="assets/teleoperation-task-glove-control.webp" alt="Operator wearing a haptic glove while controlling the simulated dexterous robotic hand" width="1920" height="1080" loading="lazy">
+            <figcaption>Human input: haptic-glove motion</figcaption>
+          </figure>
+          <figure class="task-image">
+            <img src="assets/teleoperation-task-dexhand-response.webp" alt="Simulated Franka Panda and DexHand responding to the operator's hand motion in Isaac Lab" width="1920" height="1080" loading="lazy">
+            <figcaption>Robot response: synchronized DexHand motion</figcaption>
+          </figure>
+        </div>
+
+        <figure class="teleoperation-video">
+          <img src="assets/teleoperation-task-glove-control.webp" alt="Preview of the dexterous-hand teleoperation demonstration" width="1920" height="1080" loading="lazy">
+          <figcaption><span>Video demonstration</span><strong>Teleoperation of Dexterous Hand</strong>A full task demonstration video can be embedded here.</figcaption>
         </figure>
       </div>
     </section>

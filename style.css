@@ -55,7 +55,7 @@ a { color: inherit; text-decoration: none; }
 .nav-link-primary:hover, .nav-link-primary:focus-visible { background: var(--accent-dark); color: #ffffff; }
 
 main { min-height: calc(100vh - 72px); }
-.hero, .projects-section, .about-section {
+.hero, .projects-section, .teleoperation-section, .about-section {
   width: min(calc(100% - 40px), var(--max-width));
   margin: 0 auto;
 }
@@ -306,6 +306,84 @@ h3 {
 .gallery-card figcaption { padding: 22px 24px 25px; color: var(--muted); font-size: 0.94rem; }
 .gallery-card figcaption strong { display: block; margin-bottom: 5px; color: var(--text); font-size: 1.05rem; }
 
+.teleoperation-section { padding: 105px 0; border-top: 1px solid var(--line); }
+.teleoperation-intro {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  gap: 70px;
+  align-items: start;
+}
+.teleoperation-tools { display: flex; flex-wrap: wrap; gap: 10px; }
+.teleoperation-tools span {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: #334155;
+  font-size: 0.83rem;
+  font-weight: 700;
+}
+.teleoperation-hero {
+  margin: 55px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #0d1420;
+}
+.teleoperation-hero img, .method-diagram img, .task-image img { display: block; width: 100%; height: auto; }
+.teleoperation-hero figcaption, .method-diagram figcaption, .task-image figcaption {
+  padding: 18px 22px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.teleoperation-hero figcaption strong { display: block; margin-bottom: 4px; color: var(--text); font-size: 1rem; }
+.teleoperation-method {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: 60px;
+  align-items: center;
+}
+.teleoperation-method h3, .teleoperation-achievement h3 { margin-bottom: 18px; font-size: clamp(1.8rem, 3vw, 2.75rem); }
+.teleoperation-method p, .achievement-copy p, .achievement-copy li { color: #4b5563; }
+.method-diagram, .task-image, .teleoperation-video {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+}
+.teleoperation-achievement { margin-top: 78px; }
+.achievement-copy { max-width: 820px; }
+.achievement-copy ul { margin: 24px 0 0; padding-left: 20px; }
+.achievement-copy li + li { margin-top: 8px; }
+.teleoperation-demo-grid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.task-image img { aspect-ratio: 16 / 9; object-fit: cover; }
+.teleoperation-video {
+  width: min(100%, 900px);
+  margin: 30px auto 0;
+  background: #0d1420;
+  border-color: #344155;
+}
+.teleoperation-video video, .teleoperation-video img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000; }
+.teleoperation-video figcaption { padding: 22px 24px 25px; color: #b7c1cf; font-size: 0.92rem; }
+.teleoperation-video figcaption span, .teleoperation-video figcaption strong { display: block; }
+.teleoperation-video figcaption span {
+  margin-bottom: 6px;
+  color: #72c4eb;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.teleoperation-video figcaption strong { margin-bottom: 6px; color: #fff; font-size: 1.1rem; }
+
 .about-section {
   padding: 105px 0;
   display: grid;
@@ -333,7 +411,7 @@ h3 {
 .copyright { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid #2b3546; font-size: 0.88rem; }
 
 @media (max-width: 850px) {
-  .section-heading, .project-introduction, .contribution-layout, .evidence-heading, .about-section { grid-template-columns: 1fr; gap: 36px; }
+  .section-heading, .project-introduction, .contribution-layout, .evidence-heading, .teleoperation-intro, .teleoperation-method, .about-section { grid-template-columns: 1fr; gap: 36px; }
   .project-meta { text-align: left; }
   .project-stats { grid-template-columns: 1fr; }
   .stat { min-height: 0; padding: 28px 0; }
@@ -346,6 +424,7 @@ h3 {
   .hero { min-height: 560px; padding: 90px 0 80px; }
   .hero-actions { align-items: flex-start; flex-direction: column; }
   .projects-section { padding: 80px 0; }
+  .teleoperation-section { padding: 80px 0; }
   .project-hero-image { margin-top: 38px; border-radius: 12px; }
   .project-introduction, .project-stats, .contribution-layout, .research-gallery { margin-top: 55px; }
   .evidence-section { margin-top: 65px; padding: 34px 20px; border-radius: 16px; }
@@ -353,6 +432,7 @@ h3 {
   .evidence-card-photo { grid-column: auto; }
   .evidence-card figcaption { min-height: 0; }
   .research-gallery { grid-template-columns: 1fr; }
+  .teleoperation-demo-grid { grid-template-columns: 1fr; }
   .gallery-card, .gallery-card-wide { grid-column: auto; }
   .gallery-card img, .gallery-card-wide img { height: auto; max-height: none; }
   .about-section { padding: 80px 0; }
